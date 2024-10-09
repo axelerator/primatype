@@ -5,6 +5,58 @@
   <title>Main</title>
   <script src="primatype.js"></script>
 
+  <style>
+    html, body, main {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    main {
+      position: relative;
+      overflow: hidden;
+      > * {
+	width: 100%;
+	height: 100%;
+	 
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: transform 0.5s;
+      }
+
+      .off-left {
+	transform: translateX(-100%);
+      }
+
+      .off-right {
+	transform: translateX(100%);
+      }
+
+      #lesson {
+	position: relative;
+	pre {
+	  margin: 0;
+	  width: 100%;
+	  height: 100%;
+
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+
+	  &.expected {
+	    color: #CCC;
+	  }
+	  &.good {
+	    color: #3D3;
+	  }
+	  &.bad {
+	    color: #D33;
+	  }
+	}
+      }
+    }
+  </style>
 </head>
 
 <body>
